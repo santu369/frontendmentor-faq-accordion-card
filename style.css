@@ -10,6 +10,7 @@
   --neu-gray: hsl(240, 6%, 50%);
   --light-gray: hsl(240, 5%, 91%);
 
+  --light-pink: hsl(296, 100%, 90%);
   --white: #fff;
 }
 
@@ -28,7 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 12px;
 }
 
@@ -107,7 +108,8 @@ h1 {
   margin-right: 5vw;
   font-weight: 400;
   overflow: auto;
-  min-height: 507px;
+  /* min-height: 507px; */
+  height: 507px;
 }
 
 .card-accordion h1 {
@@ -161,7 +163,28 @@ h1 {
   color: var(--neu-gray);
 }
 
-/* style for tablet */
+/* style footer */
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  color: var(--light-pink);
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--light-gray);
+}
+
+.attribution a:hover {
+  color: var(--white);
+}
+
+/* style tablet */
 
 @media screen and (max-width: 768px) {
   .bg1 {
@@ -169,7 +192,7 @@ h1 {
   }
 }
 
-/* style for mobile */
+/* style mobile */
 
 @media screen and (max-width: 425px) {
   body {
@@ -223,5 +246,9 @@ h1 {
 
   .qna {
     margin-left: 2rem;
+  }
+
+  .attribution {
+    margin-bottom: -10vw;
   }
 }
