@@ -2,20 +2,12 @@
 
 /* colors */
 :root {
-  --text-blue: hsl(238, 29%, 16%);
-  --text-red: hsl(14, 88%, 65%);
+  --prim-text-blue: hsl(238, 29%, 16%);
+  --prim-text-red: hsl(14, 88%, 65%);
   --bg-violet: hsl(273, 75%, 66%);
   --bg-blue: hsl(240, 73%, 65%);
-  --prim-gray: hsl(
-    237,
-    12%,
-    33%
-  ); /*not used -- add to questions and answers text*/
-  --sec-gray: hsl(
-    240,
-    6%,
-    50%
-  ); /*not used -- add to questions and answers text*/
+  --neu-gray-blue: hsl(237, 12%, 33%);
+  --neu-gray: hsl(240, 6%, 50%);
   --light-gray: hsl(240, 5%, 91%);
 
   --white: #fff;
@@ -40,9 +32,11 @@ body {
   font-size: 12px;
 }
 
+/* style card */
+
 .card {
   background-color: var(--white);
-  height: 507px;
+  min-height: 507px;
   width: 920px;
   max-width: 100%;
   border-radius: 16px;
@@ -54,6 +48,7 @@ body {
   position: relative;
 }
 
+/* style card left images */
 .card-images {
   flex: 1;
   position: relative;
@@ -62,36 +57,25 @@ body {
 
 .bg1 {
   position: absolute;
-  background: url(/images/bg-pattern-desktop.svg);
+  background: url(images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
-  /* background-size: 368px 1024px; */
-  /* background-size: 200% auto; */
-  /* height: 180%;
-  height: 768px;
-  width: 80%;
-  margin-right: 80px;
-  margin-top: -60%; */
-  /* margin-left: -10px; */
-  /* height: 200%; */
   height: 1014px;
   width: 80%;
-  /* margin-right: 80px; */
   margin-right: 10%;
   margin-top: -70%;
 }
 
 .bg2 {
   position: absolute;
-  background: url(/images/illustration-woman-online-desktop.svg);
+  background: url(images/illustration-woman-online-desktop.svg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
   height: 100%;
   width: 95%;
   margin-top: 25px;
-  /* margin-left: -67px; */
   margin-left: -15%;
 }
 
@@ -109,16 +93,17 @@ body {
   max-width: 18vw;
 }
 
+/* style card right accrodion */
+
 .card-accordion {
   flex: 1;
 }
 
 h1 {
-  color: var(--text-blue);
+  color: var(--prim-text-blue);
 }
 
 .qnas {
-  /* margin-right: 90px; */
   margin-right: 5vw;
   font-weight: 400;
   overflow: auto;
@@ -139,7 +124,7 @@ h1 {
   vertical-align: middle;
   padding: 1.25rem 1.25rem 1.25rem 0;
   border-bottom: 1px solid var(--light-gray);
-  color: var(--prim-gray);
+  color: var(--neu-gray-blue);
 }
 
 .icon-wrapper {
@@ -157,7 +142,7 @@ h1 {
 }
 
 .question:hover {
-  color: var(--text-red);
+  color: var(--prim-text-red);
   cursor: pointer;
 }
 
@@ -173,8 +158,10 @@ h1 {
   font-size: 0.7rem;
   padding: 0.5rem 2rem 0.2rem 0;
   line-height: 1.25rem;
-  color: var(--sec-gray);
+  color: var(--neu-gray);
 }
+
+/* style for tablet */
 
 @media screen and (max-width: 768px) {
   .bg1 {
@@ -182,48 +169,58 @@ h1 {
   }
 }
 
+/* style for mobile */
+
 @media screen and (max-width: 425px) {
   body {
-    /* height: 200vw; */
     overflow: visible;
-    margin-top: 30%;
+    margin-top: 15vw;
   }
+
   .card {
     flex-direction: column;
-    position: block;
   }
+
   .card-images {
     position: relative;
     overflow: visible;
+    display: flex;
+    justify-content: center;
   }
+
   .bg1 {
+    background: url(images/bg-pattern-mobile.svg);
     background-size: contain;
-    margin-top: -105vw;
-    width: 70%;
-    margin-right: 0;
-    margin-left: 15%;
-    height: 210vw;
+    background-repeat: no-repeat;
+    max-width: 230px;
+    max-height: 200px;
+    margin: 0;
+    top: 0;
   }
+
   .bg2 {
-    z-index: 10;
-    height: 200px;
-    height: 210vw;
-    width: 70%;
-    margin-top: -108vw;
-    margin-right: 0;
-    margin-left: 15%;
+    background: url(images/illustration-woman-online-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    max-width: 250px;
+    height: 250px;
+    top: -85px;
+    margin: -5% 7% 0 0;
   }
-  .box-wrapper {
-    top: -7%;
-    left: 14%;
-    z-index: 100;
-  }
+
   .box-wrapper img {
-    max-width: 25vw;
+    display: none;
   }
+
   h1 {
     text-align: center;
   }
+
+  .qnas {
+    padding-top: 50px;
+  }
+
   .qna {
     margin-left: 2rem;
   }
