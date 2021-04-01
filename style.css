@@ -5,11 +5,7 @@
   --text-blue: hsl(238, 29%, 16%);
   --text-red: hsl(14, 88%, 65%);
   --bg-violet: hsl(273, 75%, 66%);
-  --bg-blue: hsl(
-    240,
-    73%,
-    65%
-  ); /*not used --  add to background body gradient */
+  --bg-blue: hsl(240, 73%, 65%);
   --prim-gray: hsl(
     237,
     12%,
@@ -34,7 +30,6 @@
 
 body {
   font-family: "Kumbh Sans", Helvetica, sans-serif;
-  /* background-color: var(--bg-violet); */
   background-image: linear-gradient(var(--bg-violet), var(--bg-blue));
   font-size: 18px;
   overflow: hidden;
@@ -43,25 +38,26 @@ body {
   align-items: center;
   height: 100vh;
   font-size: 12px;
-  color: var(--text-blue);
 }
 
 .card {
   background-color: var(--white);
   height: 507px;
   width: 920px;
+  max-width: 100%;
   border-radius: 16px;
   margin: 0 24px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  overflow: hidden;
+  position: relative;
 }
 
 .card-images {
   flex: 1;
   position: relative;
+  overflow: hidden;
 }
 
 .bg1 {
@@ -70,15 +66,19 @@ body {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
+  /* background-size: 368px 1024px; */
+  /* background-size: 200% auto; */
   /* height: 180%;
   height: 768px;
   width: 80%;
   margin-right: 80px;
   margin-top: -60%; */
   /* margin-left: -10px; */
-  height: 200%;
+  /* height: 200%; */
+  height: 1014px;
   width: 80%;
-  margin-right: 80px;
+  /* margin-right: 80px; */
+  margin-right: 10%;
   margin-top: -70%;
 }
 
@@ -91,18 +91,38 @@ body {
   height: 100%;
   width: 95%;
   margin-top: 25px;
-  margin-left: -75px;
+  /* margin-left: -67px; */
+  margin-left: -15%;
+}
+
+.box-wrapper {
+  position: absolute;
+  width: 10%;
+  min-width: 90px;
+  height: auto;
+  top: 45%;
+  left: -10%;
+  z-index: 1;
+}
+
+.box-wrapper img {
+  max-width: 18vw;
 }
 
 .card-accordion {
   flex: 1;
 }
 
+h1 {
+  color: var(--text-blue);
+}
+
 .qnas {
-  margin-right: 90px;
+  /* margin-right: 90px; */
+  margin-right: 5vw;
   font-weight: 400;
   overflow: auto;
-  height: 507px;
+  min-height: 507px;
 }
 
 .card-accordion h1 {
@@ -119,6 +139,7 @@ body {
   vertical-align: middle;
   padding: 1.25rem 1.25rem 1.25rem 0;
   border-bottom: 1px solid var(--light-gray);
+  color: var(--prim-gray);
 }
 
 .icon-wrapper {
@@ -152,4 +173,58 @@ body {
   font-size: 0.7rem;
   padding: 0.5rem 2rem 0.2rem 0;
   line-height: 1.25rem;
+  color: var(--sec-gray);
+}
+
+@media screen and (max-width: 768px) {
+  .bg1 {
+    height: 875px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    /* height: 200vw; */
+    overflow: visible;
+    margin-top: 30%;
+  }
+  .card {
+    flex-direction: column;
+    position: block;
+  }
+  .card-images {
+    position: relative;
+    overflow: visible;
+  }
+  .bg1 {
+    background-size: contain;
+    margin-top: -105vw;
+    width: 70%;
+    margin-right: 0;
+    margin-left: 15%;
+    height: 210vw;
+  }
+  .bg2 {
+    z-index: 10;
+    height: 200px;
+    height: 210vw;
+    width: 70%;
+    margin-top: -108vw;
+    margin-right: 0;
+    margin-left: 15%;
+  }
+  .box-wrapper {
+    top: -7%;
+    left: 14%;
+    z-index: 100;
+  }
+  .box-wrapper img {
+    max-width: 25vw;
+  }
+  h1 {
+    text-align: center;
+  }
+  .qna {
+    margin-left: 2rem;
+  }
 }
