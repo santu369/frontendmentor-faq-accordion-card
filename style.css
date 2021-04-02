@@ -44,7 +44,6 @@
 body {
   font-family: "Kumbh Sans", Helvetica, sans-serif;
   background-image: linear-gradient(var(--bg-violet), var(--bg-blue));
-  font-size: 18px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -224,6 +223,7 @@ img.down-icon {
   .bg1 {
     height: 875px;
   }
+
   .box-wrapper {
     top: 36vh;
   }
@@ -234,7 +234,9 @@ img.down-icon {
 @media screen and (max-width: 425px) {
   body {
     overflow: visible;
-    margin-top: 15vw;
+    display: flex;
+    flex-direction: column;
+    margin: 20vh 24px 0 24px;
   }
 
   .card {
@@ -286,7 +288,12 @@ img.down-icon {
     margin-left: 2rem;
   }
 
+  .question p {
+    margin-right: 10px;
+  }
+
   .attribution {
-    margin-bottom: -10vw;
+    position: relative;
+    margin-top: 20px;
   }
 }
