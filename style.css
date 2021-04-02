@@ -190,6 +190,10 @@ h1 {
   .bg1 {
     height: 875px;
   }
+  
+  .box-wrapper {
+    top: 33vh;
+  }
 }
 
 /* style mobile */
@@ -222,6 +226,7 @@ h1 {
   }
 
   .bg2 {
+    z-index: 10;
     background: url(images/illustration-woman-online-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
