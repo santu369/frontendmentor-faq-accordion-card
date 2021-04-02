@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,7 +11,6 @@
       href="images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
@@ -28,74 +26,100 @@
         <section class="qnas">
           <h1>FAQ</h1>
           <article class="qna">
-            <div class="question" onclick="toggleAnswer(this)">
-              <p>How many team members can I invite?</p>
-              <div class="icon-wrapper">
-                <img src="images/icon-arrow-down.svg" alt="down arrow icon" />
+            <label for="q1">
+              <input type="checkbox" name="question1" id="q1" class="q" />
+              <div class="question">
+                <p>How many team members can I invite?</p>
               </div>
-            </div>
-            <div class="answer hide">
-              <p>
-                You can invite up to 2 additional users on the Free plan. There
-                is no limit on team members for the Premium plan.
-              </p>
-            </div>
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="down arrow icon"
+                class="down-icon"
+              />
+              <div class="answer hide a">
+                <p>
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </div>
+            </label>
           </article>
           <article class="qna">
-            <div class="question" onclick="toggleAnswer(this)">
-              <p>What is the maximum file upload size?</p>
-              <div class="icon-wrapper">
-                <img src="images/icon-arrow-down.svg" alt="down arrow icon" />
+            <label for="q2">
+              <input type="checkbox" name="question2" id="q2" class="q" />
+              <div class="question">
+                <p>What is the maximum file upload size?</p>
               </div>
-            </div>
-            <div class="answer hide">
-              <p>
-                No more than 2GB. All files in your account must fit your
-                allotted storage space.
-              </p>
-            </div>
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="down arrow icon"
+                class="down-icon"
+              />
+              <div class="answer hide a">
+                <p>
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </div>
+            </label>
           </article>
           <article class="qna">
-            <div class="question" onclick="toggleAnswer(this)">
-              <p>How do I reset my password?</p>
-              <div class="icon-wrapper">
-                <img src="images/icon-arrow-down.svg" alt="down arrow icon" />
+            <label for="q3">
+              <input type="checkbox" name="question3" id="q3" class="q" />
+              <div class="question">
+                <p>How do I reset my password?</p>
               </div>
-            </div>
-            <div class="answer hide">
-              <p>
-                Click “Forgot password” from the login page or “Change password”
-                from your profile page. A reset link will be emailed to you.
-              </p>
-            </div>
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="down arrow icon"
+                class="down-icon"
+              />
+              <div class="answer hide a">
+                <p>
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </div>
+            </label>
           </article>
           <article class="qna">
-            <div class="question" onclick="toggleAnswer(this)">
-              <p>Can I cancel my subscription?</p>
-              <div class="icon-wrapper">
-                <img src="images/icon-arrow-down.svg" alt="down arrow icon" />
+            <label for="q4">
+              <input type="checkbox" name="question4" id="q4" class="q" />
+              <div class="question">
+                <p>Can I cancel my subscription?</p>
               </div>
-            </div>
-            <div class="answer hide">
-              <p>
-                Yes! Send us a message and we’ll process your request no
-                questions asked.
-              </p>
-            </div>
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="down arrow icon"
+                class="down-icon"
+              />
+              <div class="answer hide a">
+                <p>
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </div>
+            </label>
           </article>
           <article class="qna">
-            <div class="question" onclick="toggleAnswer(this)">
-              <p>Do you provide additional support?</p>
-              <div class="icon-wrapper">
-                <img src="images/icon-arrow-down.svg" alt="down arrow icon" />
+            <label for="q5">
+              <input type="checkbox" name="question5" id="q5" class="q" />
+              <div class="question">
+                <p>Do you provide additional support?</p>
               </div>
-            </div>
-            <div class="answer hide">
-              <p>
-                Chat and email support is available 24/7. Phone lines are open
-                during normal business hours.
-              </p>
-            </div>
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="down arrow icon"
+                class="down-icon"
+              />
+              <div class="answer hide a">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </div>
+            </label>
           </article>
         </section>
       </div>

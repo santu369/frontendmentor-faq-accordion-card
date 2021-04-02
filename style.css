@@ -1,3 +1,9 @@
+/* take backup of working code with js from repo and create new repo or a branch */
+/* check if branch can be made live else make new repo for old js one */
+/* update readme with new screenshots and push */
+/* update challenge completed in frontend mentor */
+/* tweet and add link to js project in comments */
+
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 /* colors */
@@ -19,6 +25,26 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* style scroll bar */
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #cfc0d4;
+  margin: 10px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #73517a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #63326e;
 }
 
 body {
@@ -85,7 +111,7 @@ body {
   width: 10%;
   min-width: 90px;
   height: auto;
-  top: 45%;
+  top: 29vh;
   left: -10%;
   z-index: 1;
 }
@@ -105,10 +131,10 @@ h1 {
 }
 
 .qnas {
-  margin-right: 5vw;
+  padding-right: 4vw;
+  margin-right: 1vw;
   font-weight: 400;
   overflow: auto;
-  /* min-height: 507px; */
   height: 507px;
 }
 
@@ -129,27 +155,13 @@ h1 {
   color: var(--neu-gray-blue);
 }
 
-.icon-wrapper {
-  margin: auto 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.question img {
-  width: 10px;
-  height: auto;
-}
-
-.rotate-icon {
-  transform: rotate(180deg);
-}
-
 .question:hover {
   color: var(--prim-text-red);
   cursor: pointer;
 }
 
-.bold {
-  font-weight: 700;
+.answer:hover {
+  cursor: pointer;
 }
 
 .hide {
@@ -161,6 +173,34 @@ h1 {
   padding: 0.5rem 2rem 0.2rem 0;
   line-height: 1.25rem;
   color: var(--neu-gray);
+}
+
+/* toggle answer using checkbox */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.q:checked ~ .a {
+  display: block;
+}
+
+.q:checked ~ .question {
+  font-weight: 700;
+}
+
+.q:checked ~ .down-icon {
+  transform: rotate(180deg);
+}
+
+.qna {
+  position: relative;
+}
+
+img.down-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* style footer */
@@ -189,6 +229,9 @@ h1 {
 @media screen and (max-width: 768px) {
   .bg1 {
     height: 875px;
+  }
+  .box-wrapper {
+    top: 36vh;
   }
 }
 
@@ -222,6 +265,7 @@ h1 {
   }
 
   .bg2 {
+    z-index: 10;
     background: url(images/illustration-woman-online-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
