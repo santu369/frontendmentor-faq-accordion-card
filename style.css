@@ -168,9 +168,9 @@ h1 {
   color: var(--neu-gray);
 }
 
-/* toggle answer using checkbox */
+/* toggle answer using radio button */
 
-input[type="checkbox"] {
+input[type="radio"] {
   display: none;
 }
 
@@ -184,6 +184,10 @@ input[type="checkbox"] {
 
 .q:checked ~ .down-icon {
   transform: rotate(180deg);
+}
+
+.answer {
+  pointer-events: none;
 }
 
 .qna {
